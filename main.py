@@ -5,7 +5,7 @@ from pyobigram.client import ObigramClient,inlineQueryResultArticle
 from pyobigram.client import inlineKeyboardMarkup,inlineKeyboardMarkupArray,inlineKeyboardButton
 
 from MoodleClient import MoodleClient
->>>>>>> 5933c34322f9c94eaf53e2847818a081f3582bea
+ 5933c34322f9c94eaf53e2847818a081f3582bea
 
 from JDatabase import JsonDatabase
 import shortener
