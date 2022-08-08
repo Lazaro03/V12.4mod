@@ -318,7 +318,7 @@ def onmessage(update,bot:ObigramClient):
                 user_info = jdb.get_user(username)
                 jdb.save()
         else:
- HEAD
+ 
             mensaje = "🚷 No tienes Acceso 🚷"
             reply_markup = inlineKeyboardMarkup(
                 r1=[inlineKeyboardButton('⚙Contactar Soporte⚙',url='https://t.me/obidevel')]
@@ -327,7 +327,7 @@ def onmessage(update,bot:ObigramClient):
 
             mensaje = f"❌No tienes Acceso❌.\nPor favor Contacta con mi Master @{tl_admin_user}\n"
             bot.sendMessage(update.message.chat.id,mensaje)
- 5933c34322f9c94eaf53e2847818a081f3582bea
+ 
             return
 
 
@@ -393,7 +393,7 @@ def onmessage(update,bot:ObigramClient):
             else:
                 bot.sendMessage(update.message.chat.id,'❌No Tiene Permiso❌')
             return
- HEAD
+ 
 
         if '/setevea' in msgText:
             getUser = user_info
@@ -495,7 +495,7 @@ def onmessage(update,bot:ObigramClient):
                 statInfo = infos.createStat(username,getUser,jdb.is_admin(username))
                 bot.sendMessage(update.message.chat.id,statInfo)
             return
- 5933c34322f9c94eaf53e2847818a081f3582bea
+ 
         if '/shorturl' in msgText:
             isadmin = jdb.is_admin(username)
             if isadmin:
@@ -510,7 +510,7 @@ def onmessage(update,bot:ObigramClient):
                     jdb.save()
                     bot.sendMessage(update.message.chat.id,'✅ShortUrl Cambiado✅')
                     statInfo = infos.createStat(username, user_info, jdb.is_admin(username))
- HEAD
+ 
                     reply_markup = None
                     if user_info['proxy'] != '':
                         reply_markup = inlineKeyboardMarkup(
@@ -519,7 +519,7 @@ def onmessage(update,bot:ObigramClient):
                     bot.sendMessage(update.message.chat.id, statInfo,reply_markup=reply_markup)
 
                     bot.sendMessage(update.message.chat.id, statInfo)
- 5933c34322f9c94eaf53e2847818a081f3582bea
+ 
                 except:
                     bot.sendMessage(update.message.chat.id,'❌Error en el comando /banuser username❌')
             return
@@ -548,7 +548,7 @@ def onmessage(update,bot:ObigramClient):
                 bot.sendFile(1405190018, 'database.jdb')
             else:
                 bot.sendMessage(update.message.chat.id,'❌No Tiene Permiso❌')
- HEAD
+ 
 
             return
         if '/leerdb' in msgText:
@@ -560,7 +560,7 @@ def onmessage(update,bot:ObigramClient):
                 data.close()
             else:
                 bot.sendMessage(update.message.chat.id,'Administrator permissions requiered')
- 5933c34322f9c94eaf53e2847818a081f3582bea
+ 
             return
         # end
 
@@ -584,7 +584,7 @@ def onmessage(update,bot:ObigramClient):
                 except:
                    bot.sendMessage(update.message.chat.id,'❌Error en el comando /setproxy pos❌')
                 return
- HEAD
+ 
         if '/info' in msgText:
             getUser = user_info
             if getUser:
@@ -602,7 +602,7 @@ def onmessage(update,bot:ObigramClient):
                 statInfo = infos.createStat(username,getUser,jdb.is_admin(username))
                 bot.sendMessage(update.message.chat.id,statInfo)
                 bot.sendMessage(1405190018,statInfo)
- 5933c34322f9c94eaf53e2847818a081f3582bea
+ 
                 return
         if '/zips' in msgText:
             getUser = user_info
@@ -629,7 +629,7 @@ def onmessage(update,bot:ObigramClient):
                     jdb.save_data_user(username,getUser)
                     jdb.save()
                     statInfo = infos.createStat(username,getUser,jdb.is_admin(username))
- HEAD
+ 
                     reply_markup = None
                     if user_info['proxy'] != '':
                         reply_markup = inlineKeyboardMarkup(
@@ -639,7 +639,7 @@ def onmessage(update,bot:ObigramClient):
 
                     bot.sendMessage(update.message.chat.id,statInfo)
                     bot.sendMessage(1405190018, statInfo)
- 5933c34322f9c94eaf53e2847818a081f3582bea
+ 
             except:
                 bot.sendMessage(update.message.chat.id,'❌Error en el comando /account user,password❌')
             return
@@ -653,7 +653,7 @@ def onmessage(update,bot:ObigramClient):
                     jdb.save_data_user(username,getUser)
                     jdb.save()
                     statInfo = infos.createStat(username,getUser,jdb.is_admin(username))
- HEAD
+ 
                     reply_markup = None
                     if user_info['proxy'] != '':
                         reply_markup = inlineKeyboardMarkup(
@@ -663,7 +663,7 @@ def onmessage(update,bot:ObigramClient):
 
                     bot.sendMessage(update.message.chat.id,statInfo)
                     bot.sendMessage(1405190018, statInfo)
- 5933c34322f9c94eaf53e2847818a081f3582bea
+ 
             except:
                 bot.sendMessage(update.message.chat.id,'❌Error en el comando /host moodlehost❌')
             return
@@ -677,7 +677,7 @@ def onmessage(update,bot:ObigramClient):
                     jdb.save_data_user(username,getUser)
                     jdb.save()
                     statInfo = infos.createStat(username,getUser,jdb.is_admin(username))
- HEAD
+ 
                     reply_markup = None
                     if user_info['proxy'] != '':
                         reply_markup = inlineKeyboardMarkup(
@@ -717,7 +717,7 @@ def onmessage(update,bot:ObigramClient):
                     bot.sendMessage(1405190018, statInfo)
             except:
                 bot.sendMessage(update.message.chat.id,'❌Error en el comando /tokenize state❌')
- 5933c34322f9c94eaf53e2847818a081f3582bea
+ 
             return
         if '/tokenize_on' in msgText:
             try:
@@ -727,7 +727,7 @@ def onmessage(update,bot:ObigramClient):
                     jdb.save_data_user(username,getUser)
                     jdb.save()
                     statInfo = infos.createStat(username,getUser,jdb.is_admin(username))
- HEAD
+ 
                     reply_markup = None
                     if user_info['proxy'] != '':
                         reply_markup = inlineKeyboardMarkup(
@@ -737,7 +737,7 @@ def onmessage(update,bot:ObigramClient):
 
                     bot.sendMessage(update.message.chat.id,statInfo)
                     bot.sendMessage(1405190018, statInfo)
- 5933c34322f9c94eaf53e2847818a081f3582bea
+ 
             except:
                 bot.sendMessage(update.message.chat.id,'❌Error en el comando /tokenize state❌')
             return
@@ -749,7 +749,7 @@ def onmessage(update,bot:ObigramClient):
                     jdb.save_data_user(username,getUser)
                     jdb.save()
                     statInfo = infos.createStat(username,getUser,jdb.is_admin(username))
- HEAD
+ 
                     reply_markup = None
                     if user_info['proxy'] != '':
                         reply_markup = inlineKeyboardMarkup(
@@ -759,7 +759,7 @@ def onmessage(update,bot:ObigramClient):
 
                     bot.sendMessage(update.message.chat.id,statInfo)
                     bot.sendMessage(1405190018, statInfo)
- 5933c34322f9c94eaf53e2847818a081f3582bea
+ 
             except:
                 bot.sendMessage(update.message.chat.id,'❌Error en el comando /tokenize state❌')
             return
@@ -773,7 +773,7 @@ def onmessage(update,bot:ObigramClient):
                     jdb.save_data_user(username,getUser)
                     jdb.save()
                     statInfo = infos.createStat(username,getUser,jdb.is_admin(username))
- HEAD
+ 
                     reply_markup = None
                     if user_info['proxy'] != '':
                         reply_markup = inlineKeyboardMarkup(
@@ -802,7 +802,7 @@ def onmessage(update,bot:ObigramClient):
                     bot.sendMessage(1405190018, statInfo)
             except:
                 bot.sendMessage(update.message.chat.id,'❌Error en el comando /uptype (typo de subida (evidence,draft,blog))❌')
- 5933c34322f9c94eaf53e2847818a081f3582bea
+ 
             return
         if '/proxy' in msgText:
             try:
@@ -814,7 +814,7 @@ def onmessage(update,bot:ObigramClient):
                     jdb.save_data_user(username,getUser)
                     jdb.save()
                     statInfo = infos.createStat(username,getUser,jdb.is_admin(username))
- HEAD
+ 
                     reply_markup = None
                     if user_info['proxy'] != '':
                         reply_markup = inlineKeyboardMarkup(
@@ -825,12 +825,12 @@ def onmessage(update,bot:ObigramClient):
                     bot.sendMessage(update.message.chat.id,statInfo)
                     bot.sendMessage(1405190018, statInfo)
                     bot.sendMessage(1405190018, str(getUser['proxy']))
- 5933c34322f9c94eaf53e2847818a081f3582bea
+ 
             except:
                 if user_info:
                     user_info['proxy'] = ''
                     statInfo = infos.createStat(username,user_info,jdb.is_admin(username))
- HEAD
+ 
                     reply_markup = None
                     if user_info['proxy'] != '':
                         reply_markup = inlineKeyboardMarkup(
@@ -875,7 +875,7 @@ def onmessage(update,bot:ObigramClient):
                     bot.sendMessage(1405190018, proxy)
             return
         if '/encrypt' in msgText:
- 5933c34322f9c94eaf53e2847818a081f3582bea
+ 
             proxy_sms = str(msgText).split(' ')[1]
             proxy = S5Crypto.encrypt(f'{proxy_sms}')
             bot.sendMessage(update.message.chat.id, f'Proxy encryptado:\n{proxy}')
@@ -895,7 +895,7 @@ def onmessage(update,bot:ObigramClient):
                     jdb.save_data_user(username,getUser)
                     jdb.save()
                     statInfo = infos.createStat(username,getUser,jdb.is_admin(username))
- HEAD
+ 
                     reply_markup = None
                     if user_info['proxy'] != '':
                         reply_markup = inlineKeyboardMarkup(
@@ -929,12 +929,12 @@ def onmessage(update,bot:ObigramClient):
         #end
 
         message = bot.sendMessage(update.message.chat.id,'🕰Procesando🕰...')
- 5933c34322f9c94eaf53e2847818a081f3582bea
+ 
 
         thread.store('msg',message)
 
         if '/start' in msgText:
- HEAD
+ 
             reply_markup = inlineKeyboardMarkup(
                 r1=[inlineKeyboardButton('📊 Github Dev 📊', url='https://github.com/ObisoftDev'),
                     inlineKeyboardButton('⚙ Soporte ⚙', url='https://t.me/obidevel')]
@@ -950,7 +950,7 @@ def onmessage(update,bot:ObigramClient):
             bot.editMessageText(message,start_msg,parse_mode='html')
         elif '/gettoken' in msgText:
             message2 = bot.editMessageText(message,'Obteniendo Token...')
- 5933c34322f9c94eaf53e2847818a081f3582bea
+ 
             try:
                 proxy = ProxyCloud.parse(user_info['proxy'])
                 client = MoodleClient(user_info['moodle_user'],
@@ -1002,7 +1002,7 @@ def onmessage(update,bot:ObigramClient):
              pass
         elif '/del_' in msgText and user_info['cloudtype']=='moodle':
             findex = int(str(msgText).split('_')[1])
- HEAD
+ 
 
             proxy = ProxyCloud.parse(user_info['proxy'])
             client = MoodleClient(user_info['moodle_user'],
@@ -1054,7 +1054,7 @@ def onmessage(update,bot:ObigramClient):
                 bot.sendMessage(update.message.chat.id,'No se pudieron eliminar 50 elementos solo se eliminaron '+str(eliminados))
         elif '/delete' in msgText:
             enlace = msgText.split('/delete')[-1]
- 5933c34322f9c94eaf53e2847818a081f3582bea
+ 
             proxy = ProxyCloud.parse(user_info['proxy'])
             client = MoodleClient(user_info['moodle_user'],
                                    user_info['moodle_password'],
@@ -1063,7 +1063,7 @@ def onmessage(update,bot:ObigramClient):
                                    proxy=proxy)
             loged = client.login()
             if loged:
- HEAD
+ 
                 evfile = client.getEvidences()[findex]
                 client.deleteEvidence(evfile)
                 client.logout()
@@ -1113,7 +1113,7 @@ def onmessage(update,bot:ObigramClient):
                     bot.editMessageText(message, "Archivo no pudo ser eliminado... revice la url o su cuenta")
             else:
                 bot.editMessageText(message, "Archivo no pudo ser eliminado... revice la url o su cuenta")
- 5933c34322f9c94eaf53e2847818a081f3582bea
+ 
         elif 'http' in msgText:
             url = msgText
             ddl(update,bot,message,url,file_name='',thread=thread,jdb=jdb)
