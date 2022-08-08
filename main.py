@@ -31,7 +31,6 @@ import re
 import random
 from draft_to_calendar import Draft2Calendar
 import moodlews
- HEAD
 import moodle_client
 from moodle_client import MoodleClient
 import S5Crypto
