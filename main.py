@@ -295,7 +295,7 @@ def onmessage(update,bot:ObigramClient):
     try:
         thread = bot.this_thread
         username = update.message.sender.username
-        tl_admin_user = os.environ.get('tl_admin_user')
+        tl_admin_user = os.environ.get('Michel1203')
 <<<<<<< HEAD
 =======
         USERS = os.environ.get('tl_users_list')
@@ -1225,10 +1225,10 @@ def convert2calendar(update,bot:ObigramClient):
     pass
 
 def main():
-    bot_token = os.environ.get('bot_token')
+    bot_token = os.environ.get('5493976254:AAFIOvjR5LAO6inuY2N2ejuTHMOtrotLEqw')
     print('init bot.')
     #set in debug
-    bot = ObigramClient(bot_token)
+    bot = ObigramClient(5493976254:AAFIOvjR5LAO6inuY2N2ejuTHMOtrotLEqw)
     bot.onMessage(onmessage)
     bot.onCallbackData('/cancel ',cancel_task)
     bot.onCallbackData('/maketxt ', maketxt)
