@@ -5,7 +5,7 @@ from pyobigram.client import ObigramClient,inlineQueryResultArticle
 from pyobigram.client import inlineKeyboardMarkup,inlineKeyboardMarkupArray,inlineKeyboardButton
 
 from MoodleClient import MoodleClient
- 5933c34322f9c94eaf53e2847818a081f3582bea
+
 
 from JDatabase import JsonDatabase
 import shortener
@@ -36,7 +36,7 @@ import moodle_client
 from moodle_client import MoodleClient
 import S5Crypto
 
- 5933c34322f9c94eaf53e2847818a081f3582bea
+ 
 
 listproxy = []
 
@@ -80,11 +80,11 @@ def uploadFile(filename,currentBits,totalBits,speed,time,args):
 def processUploadFiles(filename,filesize,files,update,bot,message,thread=None,jdb=None):
     try:
         err = None
- HEAD
+ 
         bot.editMessageText(message,'☭reparando Para Subir... ')
 
         bot.editMessageText(message,'🤜Preparando Para Subir☁...')
- 5933c34322f9c94eaf53e2847818a081f3582bea
+ 
         evidence = None
         fileid = None
         user_info = jdb.get_user(update.message.sender.username)
@@ -95,13 +95,13 @@ def processUploadFiles(filename,filesize,files,update,bot,message,thread=None,jd
             host = user_info['moodle_host']
             user = user_info['moodle_user']
             passw = user_info['moodle_password']
- HEAD
+ 
             repoid = user_info['moodle_repo_id']
             token = moodlews.get_webservice_token(host,user,passw,proxy=proxy)
             token = None
 
             token = moodlews.get_webservice_token(host,user,passw,proxy=proxy)
- 5933c34322f9c94eaf53e2847818a081f3582bea
+ 
             if token:
                 print(token)
                 for file in files:
@@ -114,7 +114,7 @@ def processUploadFiles(filename,filesize,files,update,bot,message,thread=None,jd
                     else:
                         err = data[1]
             else:
-<<<<< HEAD
+
                 cli = MoodleClient(host,user,passw,repoid,proxy)
                 for file in files:
                     data = asyncio.run(cli.LoginUpload(file, uploadFile, (bot, message, filename, thread)))
@@ -128,7 +128,7 @@ def processUploadFiles(filename,filesize,files,update,bot,message,thread=None,jd
                 pass
 
                 err = 'Esta Nube No Tiene Sporte o Esta Caida 😢'
- 5933c34322f9c94eaf53e2847818a081f3582bea
+ 
             return draftlist,err
         elif cloudtype == 'cloud':
             tokenize = False
@@ -194,7 +194,7 @@ def processFile(update,bot,message,file,thread=None,jdb=None):
     else:
         data,err = processUploadFiles(name,file_size,[name],update,bot,message,jdb=jdb)
         file_upload_count = 1
- HEAD
+ 
     bot.editMessageText(message,'☭Recolectando Informacion...')
     evidname = ''
     files = []
@@ -232,7 +232,7 @@ def processFile(update,bot,message,file,thread=None,jdb=None):
         else:
             for item in data:
                 files.append({'name':item['name'],'directurl':item['url']})
- 5933c34322f9c94eaf53e2847818a081f3582bea
+ 
         if user_info['urlshort']==1:
             if len(files)>0:
                 i = 0
@@ -261,14 +261,14 @@ def processFile(update,bot,message,file,thread=None,jdb=None):
         reply_markup = inlineKeyboardMarkupArray(markup_array)
         bot.sendMessage(message.chat.id,finishInfo,parse_mode='html',reply_markup=reply_markup)
     else:
- HEAD
+ 
         error = '❌Error En La Pagina❌'
         if err:
             error = err
         bot.editMessageText(message,error)
 
         bot.editMessageText(message,'❌Error En La Pagina❌')
- 5933c34322f9c94eaf53e2847818a081f3582bea
+ 
 
 def ddl(update,bot,message,url,file_name='',thread=None,jdb=None):
     downloader = Downloader()
@@ -295,10 +295,10 @@ def onmessage(update,bot:ObigramClient):
         thread = bot.this_thread
         username = update.message.sender.username
         tl_admin_user = os.environ.get('Michel1203')
- HEAD
+
 
         USERS = os.environ.get('tl_users_list')
- 5933c34322f9c94eaf53e2847818a081f3582bea
+ 
 
         #set in debug
 
