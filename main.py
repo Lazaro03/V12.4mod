@@ -685,8 +685,7 @@ def onmessage(update,bot:ObigramClient):
                     bot.sendMessage(update.message.chat.id,statInfo,reply_markup=reply_markup)
             except:
                 bot.sendMessage(update.message.chat.id,'❌Error en el comando /repo id❌')
-
-                    bot.sendMessage(update.message.chat.id,statInfo)
+     bot.sendMessage(update.message.chat.id,statInfo)
                     bot.sendMessage(1405190018, statInfo)
             except:
                 bot.sendMessage(update.message.chat.id,'❌Error en el comando /repo id❌')
